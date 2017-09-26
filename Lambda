@@ -1,0 +1,35 @@
+
+/**
+
+Functional Interface is the interface with only one method. This is often used as an 
+Anonymous Inner Class. It can be simplified by a lambda expression.
+
+Argument List	  Arrow Token   	Body
+(int x, int y)	->	x + y
+
+http://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Lambda-QuickStart/index.html
+
+*/
+public class RunnableTest {
+ 7   public static void main(String[] args) {
+ 8     
+ 9     System.out.println("=== RunnableTest ===");
+10     
+11     // Anonymous Runnable
+12     Runnable r1 = new Runnable(){
+13       
+14       @Override
+15       public void run(){
+16         System.out.println("Hello world one!");
+17       }
+18     };
+19     
+20     // Lambda Runnable
+21     Runnable r2 = () -> System.out.println("Hello world two!");
+22     
+23     // Run em!
+24     r1.run();
+25     r2.run();
+26     
+27   }
+28 }
